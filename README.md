@@ -28,10 +28,4 @@ Unit tests are not required, but highly appreciated.
 
 Developers should fork this repository as a starting point.
 
-## Main screen
-
-Developers should copy this layout for the main screen, they are free to choose the layout for the details screen.
-
-![image](https://user-images.githubusercontent.com/30990524/112533275-887e9d80-8d88-11eb-8b62-03ca145aed98.png)
-
 
