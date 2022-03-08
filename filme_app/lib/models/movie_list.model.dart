@@ -5,29 +5,30 @@ import 'package:flutter/foundation.dart';
 import 'package:filme_app/models/movie.model.dart';
 
 class MovieListModel {
-  List<MovieModel> movies = [];
-  MovieListModel({
-    required this.movies,
-  });
+  List<MovieModel>? movies = [];
+  MovieListModel(
+    this.movies,
+  );
 
   MovieListModel copyWith({
     List<MovieModel>? movies,
   }) {
     return MovieListModel(
-      movies: movies ?? this.movies,
+      movies ?? this.movies,
     );
   }
 
   Map<String, dynamic> toMap() {
     return {
-      'movies': movies.map((x) => x.toMap()).toList(),
+      'results': movies?.map((x) => x.toMap()).toList(),
     };
   }
 
   factory MovieListModel.fromMap(Map<String, dynamic> map) {
     return MovieListModel(
-      movies: List<MovieModel>.from(
-          map['movies']?.map((x) => MovieModel.fromMap(x))),
+      map[0] != null
+          ? List<MovieModel>.from(map[0]?.map((x) => MovieModel.fromMap(x)))
+          : null,
     );
   }
 

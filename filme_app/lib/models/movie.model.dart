@@ -54,7 +54,7 @@ class MovieModel {
       'backdropPath': backdropPath,
       'id': id,
       'adult': adult,
-      'releaseDate': releaseDate,
+      'release_date': releaseDate,
       'overview': overview,
       'genres': genres?.map((x) => x.toMap()).toList(),
     };
@@ -63,13 +63,13 @@ class MovieModel {
   factory MovieModel.fromMap(Map<String, dynamic> map) {
     return MovieModel(
       title: map['title'],
-      posterPath: map['posterPath'],
-      backdropPath: map['backdropPath'],
+      posterPath: map['poster_path'],
+      backdropPath: map['backdrop_path'],
       id: map['id']?.toInt(),
       adult: map['adult'],
-      releaseDate: map['releaseDate'],
+      releaseDate: map['release_date'],
       overview: map['overview'],
-      genres: map['genres'] != null
+      genres: map['genres_id'] != null
           ? List<GenreModel>.from(
               map['genres']?.map((x) => GenreModel.fromMap(x)))
           : null,
