@@ -13,6 +13,7 @@ class MovieModel {
   String? releaseDate;
   String? overview;
   List<GenreModel>? genres;
+
   MovieModel({
     this.title,
     this.posterPath,
