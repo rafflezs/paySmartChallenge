@@ -24,4 +24,9 @@ class Url {
   imageSearch(String imgPath) {
     return "https://image.tmdb.org/t/p/original/${imgPath}";
   }
+
+  getMovieGenres() {
+    return Uri.parse(
+        baseUrl + "genre/movie/list?api_key=${API_KEY}&language=en-US");
+  }
 }

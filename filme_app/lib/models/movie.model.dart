@@ -14,6 +14,8 @@ class MovieModel {
   String? overview;
   List<GenreModel>? genres;
 
+  String? genresConcat;
+
   MovieModel({
     this.title,
     this.posterPath,

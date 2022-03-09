@@ -27,11 +27,12 @@ class _UpcomingTabState extends State<UpcomingTab> {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
+        mainAxisSpacing: 1,
+        crossAxisSpacing: 2,
         childAspectRatio: MediaQuery.of(context).size.width /
-            (MediaQuery.of(context).size.height / 2),
+            (MediaQuery.of(context).size.height * 0.86),
       ),
+      padding: EdgeInsets.all(2),
       itemCount: controller.movies!.length,
       itemBuilder: (context, index) {
         return MovieCardComponent(movie: controller.movies![index]);
